@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row.well
+    - var posts = getPosts(0,1)
+    - var page  = 1
+    - each post in posts
+      include includes/postShort
+    - var posts = getPosts(1,3)
+    - var page  = 1
+    - each post in posts
+      include includes/postSnippet
+  if getPageCount() > 1
+    .row.well
+      include includes/pagination
