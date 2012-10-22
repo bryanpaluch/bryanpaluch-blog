@@ -5,7 +5,7 @@ var
   poet    = require('poet')( app );
 
 var cache = new htmlcache();
-console.log(cache);
+
 poet
   .createPostRoute()
   .createPageRoute()
