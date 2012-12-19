@@ -4,7 +4,7 @@
   "main" : "server.js",
   "private" : true,
   "dependencies" : {
-    "poet"    : "latest",
+    "poet"    : "https://github.com/bryanpaluch/poet/tarball/343e2c142a",
     "express" : "latest",
     "jade"    : "latest"
   }
