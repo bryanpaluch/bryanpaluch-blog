@@ -5,6 +5,8 @@ html
     meta(charset='utf-8')
     link(rel='stylesheet', href='/css/bootstrap.css')
     link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='http://yandex.st/highlightjs/7.3/styles/default.min.css')
+    script(src='http://yandex.st/highlightjs/7.3/highlight.min.js')
     script(type='text/javascript')
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-35470244-2']);
@@ -14,6 +16,8 @@ html
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    script(type='text/javascript')
+      hljs.initHighlightingOnLoad();
   body
     .navbar.navbar-static-top
       .navbar-inner
@@ -22,7 +26,10 @@ html
     .wrap
       .container-fluid
         .row-fluid
-          .span6.offset2
+          .span2
+            .well.sidebar-nav
+              include includes/ads
+          .span6
             block content
           .span2
             .row

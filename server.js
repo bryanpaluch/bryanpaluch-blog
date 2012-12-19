@@ -18,7 +18,8 @@ app.set( 'views', __dirname + '/views' );
 app.use( express.static( __dirname + '/public' ));
 app.use( app.router );
 
-app.get( '/', checkCache, renderIndex);
+//app.get( '/', checkCache, renderIndex);
+app.get( '/',  renderIndex);
 
 app.listen( 3001 );
 
