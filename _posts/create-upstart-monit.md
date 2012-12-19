@@ -5,10 +5,10 @@
     "date"     : "12-18-2012"
 }}}
 
-There are a lot of really great Platform as a service offerings
-out there but for me running services on an ec2 instance is easier. Up until a few days ago I've been using
-forever to keep my processes running and just hoping my server doesn't
-restart. It's worked although its kind of a manual process to start and
+There are a lot of really great platform as a service offerings
+out there but I prefer to run my nodejs services on virtual machines. I like to know that I have full control of how my application will interact with the operating system.
+Up until a few days ago I've been using
+forever to keep my processes running. It's worked although its kind of a manual process to start and
 stop. I've started using
 upstart and monit because of the added control and security they add to
 my system. After reading
