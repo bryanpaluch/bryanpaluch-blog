@@ -5,20 +5,19 @@
     "date"     : "12-18-2012"
 }}}
 
-I know there are a lot of really great Platform as a service offerings
-out there but for some just running a bunch of random small services on
-an ec2 instance is easier. Up until a few days ago I've been using
+There are a lot of really great Platform as a service offerings
+out there but for me running services on an ec2 instance is easier. Up until a few days ago I've been using
 forever to keep my processes running and just hoping my server doesn't
-restart. It's worked although kind of manually. I've started using
+restart. It's worked although its kind of a manual process to start and
+stop. I've started using
 upstart and monit because of the added control and security they add to
 my system. After reading
-[this](http://howtonode.org/deploying-node-upstart-monit) I got started
-converting my services. I felt the most annoying part of all of it was
-creating the configuration files for both upstart and monit. I've got
+[http://howtonode.org/deploying-node-upstart-monit](http://howtonode.org/deploying-node-upstart-monit)
+I started converting my services. I felt the most annoying part of all of it was
+creating the upstart and monit configuration files. I have
 about 7 nodejs services running on my machine and all of the files ended
-up being very similar. I fat fingered one of the configuration files
-during the tutorial and it resulted in an hour of debugging. I decided that
-automating the creation of these files based off of the application's
+up being very similar. During the tutorial I fat fingered one of the configuration files which resulted in an hour debug session. 
+I thought that automating the creation of these files based off of the application's
 package.json and it's port, would be the best way of
 avoiding future debug sessions. I've published my tool to npm it's
 called create-upstart-monit.
