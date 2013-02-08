@@ -60,7 +60,6 @@ sensor-communicator has a few jobs.
 The sensor-communicator essentially acts as a communication trunk for
 sensors to the internet. Here is my raspberrypi with the xbee explorer:
 ![Raspberrypi + Xbee](http://i.imgur.com/ZFWdgRI.jpg)
-
 The final layer is the cloud-coordinator. The sensor-communicators
 connect to this, and report what sensors they are in charge of, and also
 authenticate against this. It has a bunch of responsibilities as well:
@@ -146,6 +145,14 @@ I haven't decided where to put the
 rules engine, but I think most home automation systems out there live on
 a split brain type of system.
 
+UPDATE
+
+I added a diagram of what the end architecture will look like.
+![Full Architecture](http://i.imgur.com/qt6cnCo.png)
+
+I also started working on a rules engine. The rules are written in pure
+JSON, and it can fire off functions which it can reference from a
+catalog. More on that later.
 
 Leave a comment if you
 have any suggestions or questions.
