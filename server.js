@@ -26,6 +26,9 @@ app.listen( 3001 );
 //Temporary caching of main page
 function renderIndex( req, res){
   res.render('index' , function(err, html){
+    if(err){
+      throw new Error("Problem rendering");
+    }
     res.send(html);
     cache.save('index', html);
   });
